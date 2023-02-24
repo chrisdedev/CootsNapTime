@@ -7,7 +7,8 @@ onready var nap_timer = $NapTimer
 var wake_up
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), 0)
+	#AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), Globals.volume)
+	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false)
 	Globals.picked_object=null
 	Globals.nap_timer = $NapTimer
 

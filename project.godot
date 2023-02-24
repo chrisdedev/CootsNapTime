@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="CootsNapTime"
-run/main_scene="res://Menu.tscn"
+run/main_scene="res://MainMenu.tscn"
 config/icon="res://icon2.png"
 
 [autoload]

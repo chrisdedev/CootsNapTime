@@ -8,6 +8,8 @@ var random = RandomNumberGenerator.new()
 
 signal add_point
 
+var volume = 0
+
 var point = 0 setget set_points
 var room_spawners=[]
 var nap_spawners=[]
