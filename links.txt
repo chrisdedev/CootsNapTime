@@ -1,0 +1,2 @@
+https://vnbp.itch.io/low-poly-home-set
+https://github.com/crazyStewie/godot_simple_first_person_controller/tree/master/assets/player

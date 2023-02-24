@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://resource/UI/InGame/InGame.gd" type="Script" id=1]
+[ext_resource path="res://resource/UI/UIBars/ProgressWheel/ProgressWheel.tscn" type="PackedScene" id=2]
+
+[node name="InGame" type="Control"]
+pause_mode = 1
+physics_interpolation_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+text = "TTTT"
+
+[node name="ProgressWheel" parent="." instance=ExtResource( 2 )]
+margin_left = 1197.0
+margin_top = 7.0
+margin_right = 1197.0
+margin_bottom = 7.0
+rect_scale = Vector2( 0.1, 0.1 )
+fg_flash_change = false
+fg_change_color = false

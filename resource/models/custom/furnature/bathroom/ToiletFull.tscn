@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://resource/models/custom/furnature/bathroom/Toilet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://resource/models/custom/furnature/bathroom/Toilet Ac1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://resource/models/custom/furnature/bathroom/Toilet Ac2.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CylinderShape" id=1]
+height = 0.537158
+radius = 0.26807
+
+[node name="ToiletFull" type="Spatial"]
+
+[node name="Toilet" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0.5 )
+
+[node name="Toilet Ac2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.01, 0, 0, 0, 0.00589901, -0.00807475, 0, 0.00807475, 0.00589901, -0.00792447, 0.573, 0.28 )
+
+[node name="Toilet Ac1" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.01, 0, 0, 0, 0.00362178, -0.00932109, 0, 0.00932109, 0.00362178, -0.00274393, 0.583, 0.3 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.313, 0.523269 )
+shape = SubResource( 1 )
