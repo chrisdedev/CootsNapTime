@@ -13,7 +13,8 @@ func _ready():
 
 func _on_NapDepleteTimer_timeout():
 	if Globals.nap_timer != null:
-		Globals.nap_timer.paused=true
 		var t_left = Globals.nap_timer.time_left
-		Globals.nap_timer.start(max(t_left-2,0))
-		Globals.nap_timer.paused=false
+		if t_left > 3:
+			Globals.nap_timer.paused=true
+			Globals.nap_timer.start(max(t_left-2,0))
+			Globals.nap_timer.paused=false

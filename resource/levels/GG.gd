@@ -8,15 +8,16 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-	#Globals.connect("add_point",self,"update_points")
-	
-#func update_points():
-#	$RichTextLabel.text=str(Globals.point)
+	Globals.player=null
+	Globals.nap_timer=null
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
+	$CenterContainer/VBoxContainer/Label2.text="Score: "+str(Globals.point)
 
 
-func start():
-	$ProgressWheel.get_node("Timer").start(1)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_MenuButton_pressed():
+	get_tree().change_scene("res://MainMenu.tscn")

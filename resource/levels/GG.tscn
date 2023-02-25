@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://resource/models/custom/bedroom/MenuTheme.tres" type="Theme" id=1]
+[ext_resource path="res://resource/levels/GG.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/Arvo/Arvo-Bold.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 200
+outline_size = 3
+outline_color = Color( 0.0117647, 0.00784314, 0.00784314, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 150
+outline_size = 3
+outline_color = Color( 0.0117647, 0.00784314, 0.00784314, 1 )
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 61.0
+margin_top = 94.0
+margin_right = 1218.0
+margin_bottom = 625.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 1157.0
+margin_bottom = 243.0
+custom_colors/font_color = Color( 1, 0.643137, 0.596078, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Game Over"
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 247.0
+margin_right = 1157.0
+margin_bottom = 430.0
+custom_colors/font_color = Color( 1, 0.643137, 0.596078, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Score: "
+align = 1
+
+[node name="MenuButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 434.0
+margin_right = 1157.0
+margin_bottom = 531.0
+theme = ExtResource( 1 )
+text = "MENU"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/MenuButton" to="." method="_on_MenuButton_pressed"]

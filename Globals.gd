@@ -6,6 +6,8 @@ extends Node
 # var b = "text"
 var random = RandomNumberGenerator.new()
 
+var tutorial = true
+
 signal add_point
 
 var volume = 0
@@ -16,6 +18,7 @@ var nap_spawners=[]
 var last_room=-1
 var picked_object = null
 var player = null
+var nap_coots = null
 
 var nap_timer
 # Called when the node enters the scene tree for the first time.
@@ -41,8 +44,9 @@ func spawn_all():
 		e.spawn()
 
 func spawn_nap():
-	var num = random.randi_range(0,nap_spawners.size()-1)
-	nap_spawners[num].spawn()
+	if nap_coots == null:
+		var num = random.randi_range(0,nap_spawners.size()-1)
+		nap_spawners[num].spawn()
 
 func spawn():
 	var num = random.randi_range(0,room_spawners.size()-1)

@@ -138,43 +138,43 @@ margin_right = 1074.0
 margin_bottom = 477.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Menu/MainMenu/VBoxContainer/HBoxContainer"]
-margin_right = 327.0
+margin_right = 384.0
 margin_bottom = 351.0
 size_flags_vertical = 3
 custom_constants/separation = 30
 alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Menu/MainMenu/VBoxContainer/HBoxContainer/VBoxContainer"]
-margin_right = 327.0
+margin_right = 384.0
 margin_bottom = 97.0
 
 [node name="PlayButton" type="Button" parent="Menu/MainMenu/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
-margin_right = 183.0
+margin_right = 220.0
 margin_bottom = 97.0
 theme = ExtResource( 2 )
-text = "Play"
+text = "PLAY"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Menu/MainMenu/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 127.0
-margin_right = 327.0
+margin_right = 384.0
 margin_bottom = 224.0
 
 [node name="OptionsButton" type="Button" parent="Menu/MainMenu/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
-margin_right = 327.0
+margin_right = 384.0
 margin_bottom = 97.0
 theme = ExtResource( 2 )
-text = "Options"
+text = "OPTIONS"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="Menu/MainMenu/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 254.0
-margin_right = 327.0
+margin_right = 384.0
 margin_bottom = 351.0
 
 [node name="QuitButton" type="Button" parent="Menu/MainMenu/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
-margin_right = 181.0
+margin_right = 213.0
 margin_bottom = 97.0
 theme = ExtResource( 2 )
-text = "Quit"
+text = "QUIT"
 
 [connection signal="pressed" from="Menu/MainMenu/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="Menu/MainMenu/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/OptionsButton" to="." method="_on_OptionsButton_pressed"]

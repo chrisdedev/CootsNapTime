@@ -1,4 +1,4 @@
-extends Control
+extends Spatial
 
 
 # Declare member variables here. Examples:
@@ -8,15 +8,13 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-	#Globals.connect("add_point",self,"update_points")
-	
-#func update_points():
-#	$RichTextLabel.text=str(Globals.point)
+	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), true)
 
 
-func start():
-	$ProgressWheel.get_node("Timer").start(1)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Button_pressed():
+	get_tree().change_scene("res://resource/levels/level1/level1.tscn")

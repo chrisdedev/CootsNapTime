@@ -1,3 +1,4 @@
 https://vnbp.itch.io/low-poly-home-set
 https://github.com/crazyStewie/godot_simple_first_person_controller/tree/master/assets/player
 https://fonts.google.com/specimen/Tilt+Warp
+https://thoseawesomeguys.com/prompts/

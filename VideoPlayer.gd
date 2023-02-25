@@ -8,7 +8,8 @@ extends VideoPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false)
 
 func _on_VideoPlayer_finished():
+	Globals.tutorial=false
 	get_tree().change_scene("res://Tutorial.tscn")

@@ -16,8 +16,9 @@ func _ready():
 #	pass
 
 
-func _on_NapDepleteTimer_timeout():
-	get_parent().nap_timer.paused=true
-	var t_left = get_parent().nap_timer.time_left
-	get_parent().nap_timer.start(max(t_left-2,0))
-	get_parent().nap_timer.paused=false
+#func _on_NapDepleteTimer_timeout():
+#	var t_left = get_parent().nap_timer.time_left
+#	if (t_left>3):
+#		get_parent().nap_timer.paused=true
+#		get_parent().nap_timer.start(max(t_left-2,0))
+#		get_parent().nap_timer.paused=false

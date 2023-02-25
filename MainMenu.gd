@@ -26,7 +26,12 @@ func _process(delta):
 
 
 func _on_PlayButton_pressed():
-	print("P b")
+	if Globals.tutorial:
+		get_tree().change_scene("res://VideoPlayer.tscn")
+	else:
+		get_tree().change_scene("res://resource/levels/level1/level1.tscn")
+
+
 
 
 func _on_OptionsButton_pressed():

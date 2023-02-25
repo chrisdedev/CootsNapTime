@@ -26,9 +26,10 @@ func getLookAt(target, up):
 func _physics_process(delta):
 	if Globals.player != null:
 		#var c = translation.cross(get_parent().player.translation)
-		look_at(get_tree().current_scene.player.translation,Vector3(0,1,0))
+		look_at(Globals.player.translation,Vector3(0,1,0))
 		#rotation_degrees = (get_global_transform_interpolated()-player.get_global_transform_interpolated())
 
 
 func _on_Timer_timeout():
+	Globals.nap_coots=null
 	queue_free()
