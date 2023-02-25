@@ -8,6 +8,7 @@ extends Spatial
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Globals.nap_coots=self
 	pass # Replace with function body.
 
 
