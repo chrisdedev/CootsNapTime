@@ -81,6 +81,8 @@ func handle_focus(event : InputEvent):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
 	elif event.is_action_pressed(self.uncapture_action) and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
+		$Pause.show()
+		get_tree().paused=true
 
 func _unhandled_input(event : InputEvent):
 	self.handle_focus(event);

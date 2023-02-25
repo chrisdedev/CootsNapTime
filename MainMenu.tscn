@@ -176,6 +176,31 @@ margin_bottom = 97.0
 theme = ExtResource( 2 )
 text = "QUIT"
 
+[node name="CenterContainer" type="CenterContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 232.0
+margin_top = 197.0
+margin_right = 1048.0
+margin_bottom = 523.0
+
+[node name="LogoLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 816.0
+margin_bottom = 122.0
+custom_colors/font_color = Color( 0.552941, 0.552941, 0.552941, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Coots Nap Time"
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/VBoxContainer"]
+margin_top = 126.0
+margin_right = 816.0
+margin_bottom = 326.0
+rect_min_size = Vector2( 0, 200 )
+color = Color( 1, 1, 1, 0 )
+
 [connection signal="pressed" from="Menu/MainMenu/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="Menu/MainMenu/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="Menu/MainMenu/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3/QuitButton" to="." method="_on_QuitButton_pressed"]

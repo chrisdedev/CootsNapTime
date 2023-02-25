@@ -9,9 +9,8 @@ var wake_up
 func _ready():
 	#AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), Globals.volume)
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false)
-	Globals.picked_object=null
-	Globals.point=0
 	Globals.nap_timer = $NapTimer
+
 
 func _on_Timer_timeout():
 	Globals.spawn()

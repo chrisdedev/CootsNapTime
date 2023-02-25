@@ -11,6 +11,10 @@ extends Spatial
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Globals.room_spawners=[]
+	Globals.nap_spawners=[]
+	Globals.picked_object=null
+	Globals.point=0
 	#AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), -80)
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), true)
 
