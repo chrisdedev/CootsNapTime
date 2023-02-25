@@ -686,7 +686,6 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -
 
 [node name="Floors2" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0 )
-visible = false
 
 [node name="Walls" type="Spatial" parent="Floors2"]
 
