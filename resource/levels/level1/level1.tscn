@@ -864,7 +864,7 @@ room_name = "bathroom1"
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -10 )
 
 [node name="CootsSpawner2" parent="Floors1/Spawners" instance=ExtResource( 22 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.18976, 2.44945 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18976, -9.55055 )
 
 [node name="Spatial" parent="Floors1" instance=ExtResource( 47 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -9 )
@@ -1319,10 +1319,10 @@ mesh = SubResource( 23 )
 [node name="Spawners" type="Spatial" parent="Floors2"]
 
 [node name="CootsSpawner" parent="Floors2/Spawners" instance=ExtResource( 22 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 4, -9 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 4, -14 )
 
 [node name="CootsSpawner2" parent="Floors2/Spawners" instance=ExtResource( 22 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, -1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 5, -17 )
 
 [node name="NoiseSpawner" parent="Floors2/Spawners" instance=ExtResource( 16 )]
 transform = Transform( -0.458975, 0, -0.888449, 0, 1, 0, 0.888449, 0, -0.458975, 9, 3.759, -11 )

@@ -171,4 +171,5 @@ func _on_CatNapArea_area_entered(area):
 	var coots_left = area.get_parent().get_node("Timer").time_left
 	get_parent().nap_timer.start(min(coots_left+5.0+t_left,100.0))
 	get_parent().nap_timer.paused=false
-	area.get_parent().queue_free()
+	Globals.nap_coots=null
+	area.get_parent().clear_used()

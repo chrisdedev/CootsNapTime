@@ -30,7 +30,12 @@ func _physics_process(delta):
 		look_at(Globals.player.translation,Vector3(0,1,0))
 		#rotation_degrees = (get_global_transform_interpolated()-player.get_global_transform_interpolated())
 
+func clear_used():
+	get_parent().clear_used()
+	queue_free()
+
 
 func _on_Timer_timeout():
 	Globals.nap_coots=null
+	get_parent().clear_used()
 	queue_free()

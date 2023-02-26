@@ -12,4 +12,9 @@ func _ready():
 #	pass
 
 func spawn():
+	print("spawn")
 	add_child(coots.instance())
+
+func clear_used():
+	print("clear spawn")
+	Globals.clear_used(self)

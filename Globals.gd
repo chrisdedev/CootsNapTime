@@ -15,6 +15,7 @@ var volume = 0
 var point = 0 setget set_points
 var room_spawners=[]
 var nap_spawners=[]
+var used_nap_spawner=[]
 var last_room=-1
 var picked_object = null
 var player = null
@@ -28,6 +29,7 @@ func _ready():
 
 func add_nap_spawner(node):
 	nap_spawners.append(node)
+	used_nap_spawner.append(false)
 
 func add_spawner(node):
 	for e in room_spawners:
@@ -44,9 +46,19 @@ func spawn_all():
 		e.spawn()
 
 func spawn_nap():
-	if nap_coots == null:
-		var num = random.randi_range(0,nap_spawners.size()-1)
-		nap_spawners[num].spawn()
+	var num = random.randi_range(0,nap_spawners.size()-1)
+	for i in range(0,nap_spawners.size()-1):
+		var index = (num+i) %nap_spawners.size()
+		if not used_nap_spawner[index]:
+			nap_spawners[index].spawn()
+			used_nap_spawner[index]=true
+			return
+
+func clear_used(nap):
+	for i in range(0,used_nap_spawner.size()-1):
+		if nap_spawners[i] == nap:
+			used_nap_spawner[i]=false
+			return
 
 func spawn():
 	var num = random.randi_range(0,room_spawners.size()-1)
